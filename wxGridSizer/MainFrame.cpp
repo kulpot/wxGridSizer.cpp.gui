@@ -1,6 +1,3 @@
-#include "MainFrame.h"
-#include <wx/wx.h>
-
 //C++ GUI Programming For Beginners | Episode 12 - wxBoxSizer //ref link:https://www.youtube.com/watch?v=b5RtMxMZikg&list=PLFk1_lkqT8MbVOcwEppCPfjGOGhLvcf9G&index=14
 //C++ GUI Programming For Beginners | Episode 13 - wxGridSizer //ref link:https://www.youtube.com/watch?v=LwIFdqk156g&list=PLFk1_lkqT8MbVOcwEppCPfjGOGhLvcf9G&index=15
 //----------------SETUP--------------------------------------START---
@@ -17,62 +14,93 @@
 
 //----------------SETUP--------------------------------------END---
 
-MainFrame::MainFrame(const wxString& title)
-	: wxFrame(nullptr, wxID_ANY, title)
+//---------Start---------C++ GUI Programming For Beginners | Episode 13 - wxGridSizer //ref link:https://www.youtube.com/watch?v=LwIFdqk156g&list=PLFk1_lkqT8MbVOcwEppCPfjGOGhLvcf9G&index=15
+
+#include "MainFrame.h"
+#include <wx/wx.h>
+#include <vector>
+
+MainFrame::MainFrame(const wxString& title) : wxFrame(nullptr, wxID_ANY, title)
 {
-	//wxButton* button1 = new wxButton(this, wxID_ANY, "Button 1", wxDefaultPosition, wxSize(300, 100));
-	//wxButton* button2 = new wxButton(this, wxID_ANY, "Button 2", wxDefaultPosition, wxSize(300, 100));
-	//
-	//wxBoxSizer* boxSizer = new wxBoxSizer(wxHORIZONTAL);
-	////wxSizerFlags flags = wxSizerFlags().Proportion(1).CenterVertical().Border(wxALL, 25);
-	//
-	////boxSizer->Add(button1, 1, wxLEFT | wxRIGHT, 25);
-	////boxSizer->Add(button1, 1, wxALIGN_CENTER | wxLEFT, 25);
-	////boxSizer->Add(button1, wxSizerFlags().Proportion(1).CenterVertical().Border(wxALL, 25));
-	////boxSizer->Add(button1, 1, wxALL, 25);
-	////boxSizer->Add(button2, 0);
-	////boxSizer->Add(button1, flags);
-	////boxSizer->Add(button2, flags);
-	//boxSizer->AddStretchSpacer();
-	//boxSizer->Add(button1);
-	////boxSizer->AddSpacer(20);
-	//boxSizer->AddStretchSpacer();
-	//boxSizer->Add(button2);
-	//boxSizer->AddStretchSpacer();
 
-	wxArrayString choices;
-	choices.Add("No");
-	choices.Add("Yes");
-
-	wxPanel* panel = new wxPanel(this);
-	wxStaticText* staticText = new wxStaticText(panel, wxID_ANY, "Please rate this video (from 0-10)");
-	wxSlider* slider = new wxSlider(panel, wxID_ANY, 5, 0, 10, wxDefaultPosition, wxSize(200, -1), wxSL_VALUE_LABEL);
-	wxCheckBox* checkBox = new wxCheckBox(panel, wxID_ANY, "BoxSizers make sense now");
-	wxRadioBox* radioBox = new wxRadioBox(panel, wxID_ANY, "Are you subscribed?", wxDefaultPosition, wxDefaultSize, choices);
-
-	//wxStaticText* staticText = new wxStaticText(this, wxID_ANY, "Please rate this video (from 0-10)");
-	//wxSlider* slider = new wxSlider(this, wxID_ANY, 5, 0, 10, wxDefaultPosition, wxSize(200, -1), wxSL_VALUE_LABEL);
-	//wxCheckBox* checkBox = new wxCheckBox(this, wxID_ANY, "BoxSizers make sense now");
-	//wxRadioBox* radioBox = new wxRadioBox(this, wxID_ANY, "Are you subscribed?", wxDefaultPosition, wxDefaultSize, choices);
-
-	wxBoxSizer* boxSizer = new wxBoxSizer(wxVERTICAL);
-	wxSizerFlags flags = wxSizerFlags().CenterHorizontal().Border(wxALL, 25);
-
-	boxSizer->AddStretchSpacer(1);
-	boxSizer->Add(staticText, flags);
-	boxSizer->Add(slider, flags);
-	boxSizer->Add(checkBox, flags);
-	boxSizer->Add(radioBox, flags);
-	boxSizer->AddStretchSpacer(1);
-
-	panel->SetSizer(boxSizer);
-	boxSizer->SetSizeHints(this);
-
-	//panel->SetSizerAndFit(boxSizer);
-	//SetSizerAndFit(boxSizer);
-	SetClientSize(800, 600);
 }
 
+
+
+
+
+//----------END-----------C++ GUI Programming For Beginners | Episode 13 - wxGridSizer //ref link:https://www.youtube.com/watch?v=LwIFdqk156g&list=PLFk1_lkqT8MbVOcwEppCPfjGOGhLvcf9G&index=15
+
+
+
+
+
+
+
+
+
+//-------START--------C++ GUI Programming For Beginners | Episode 12 - wxBoxSizer //ref link:https://www.youtube.com/watch?v=b5RtMxMZikg&list=PLFk1_lkqT8MbVOcwEppCPfjGOGhLvcf9G&index=14
+
+//#include "MainFrame.h"
+//#include <wx/wx.h>
+
+//MainFrame::MainFrame(const wxString& title)
+//	: wxFrame(nullptr, wxID_ANY, title)
+//{
+//	//wxButton* button1 = new wxButton(this, wxID_ANY, "Button 1", wxDefaultPosition, wxSize(300, 100));
+//	//wxButton* button2 = new wxButton(this, wxID_ANY, "Button 2", wxDefaultPosition, wxSize(300, 100));
+//	//
+//	//wxBoxSizer* boxSizer = new wxBoxSizer(wxHORIZONTAL);
+//	////wxSizerFlags flags = wxSizerFlags().Proportion(1).CenterVertical().Border(wxALL, 25);
+//	//
+//	////boxSizer->Add(button1, 1, wxLEFT | wxRIGHT, 25);
+//	////boxSizer->Add(button1, 1, wxALIGN_CENTER | wxLEFT, 25);
+//	////boxSizer->Add(button1, wxSizerFlags().Proportion(1).CenterVertical().Border(wxALL, 25));
+//	////boxSizer->Add(button1, 1, wxALL, 25);
+//	////boxSizer->Add(button2, 0);
+//	////boxSizer->Add(button1, flags);
+//	////boxSizer->Add(button2, flags);
+//	//boxSizer->AddStretchSpacer();
+//	//boxSizer->Add(button1);
+//	////boxSizer->AddSpacer(20);
+//	//boxSizer->AddStretchSpacer();
+//	//boxSizer->Add(button2);
+//	//boxSizer->AddStretchSpacer();
+//
+//	wxArrayString choices;
+//	choices.Add("No");
+//	choices.Add("Yes");
+//
+//	wxPanel* panel = new wxPanel(this);
+//	wxStaticText* staticText = new wxStaticText(panel, wxID_ANY, "Please rate this video (from 0-10)");
+//	wxSlider* slider = new wxSlider(panel, wxID_ANY, 5, 0, 10, wxDefaultPosition, wxSize(200, -1), wxSL_VALUE_LABEL);
+//	wxCheckBox* checkBox = new wxCheckBox(panel, wxID_ANY, "BoxSizers make sense now");
+//	wxRadioBox* radioBox = new wxRadioBox(panel, wxID_ANY, "Are you subscribed?", wxDefaultPosition, wxDefaultSize, choices);
+//
+//	//wxStaticText* staticText = new wxStaticText(this, wxID_ANY, "Please rate this video (from 0-10)");
+//	//wxSlider* slider = new wxSlider(this, wxID_ANY, 5, 0, 10, wxDefaultPosition, wxSize(200, -1), wxSL_VALUE_LABEL);
+//	//wxCheckBox* checkBox = new wxCheckBox(this, wxID_ANY, "BoxSizers make sense now");
+//	//wxRadioBox* radioBox = new wxRadioBox(this, wxID_ANY, "Are you subscribed?", wxDefaultPosition, wxDefaultSize, choices);
+//
+//	wxBoxSizer* boxSizer = new wxBoxSizer(wxVERTICAL);
+//	wxSizerFlags flags = wxSizerFlags().CenterHorizontal().Border(wxALL, 25);
+//
+//	boxSizer->AddStretchSpacer(1);
+//	boxSizer->Add(staticText, flags);
+//	boxSizer->Add(slider, flags);
+//	boxSizer->Add(checkBox, flags);
+//	boxSizer->Add(radioBox, flags);
+//	boxSizer->AddStretchSpacer(1);
+//
+//	panel->SetSizer(boxSizer);
+//	boxSizer->SetSizeHints(this);
+//
+//	//panel->SetSizerAndFit(boxSizer);
+//	//SetSizerAndFit(boxSizer);
+//	SetClientSize(800, 600);
+//}
+
+//---------END----------C++ GUI Programming For Beginners | Episode 12 - wxBoxSizer //ref link:https://www.youtube.com/watch?v=b5RtMxMZikg&list=PLFk1_lkqT8MbVOcwEppCPfjGOGhLvcf9G&index=14
 
 
 
