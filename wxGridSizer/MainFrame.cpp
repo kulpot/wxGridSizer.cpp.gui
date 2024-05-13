@@ -2,6 +2,7 @@
 #include <wx/wx.h>
 
 //C++ GUI Programming For Beginners | Episode 12 - wxBoxSizer //ref link:https://www.youtube.com/watch?v=b5RtMxMZikg&list=PLFk1_lkqT8MbVOcwEppCPfjGOGhLvcf9G&index=14
+//C++ GUI Programming For Beginners | Episode 13 - wxGridSizer //ref link:https://www.youtube.com/watch?v=LwIFdqk156g&list=PLFk1_lkqT8MbVOcwEppCPfjGOGhLvcf9G&index=15
 //----------------SETUP--------------------------------------START---
 //Create new project->Empty Project(c++/Windows/Console)
 
