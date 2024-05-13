@@ -29,8 +29,10 @@ MainFrame::MainFrame(const wxString& title) : wxFrame(nullptr, wxID_ANY, title)
 	{
 		wxString label = wxString::Format("Button %d", i + 1);
 		wxButton* button = new wxButton(panel, wxID_ANY, label, wxDefaultPosition, wxSize(300, 100));
-
+		buttons.push_back(button);
 	}
+
+
 }
 
 
