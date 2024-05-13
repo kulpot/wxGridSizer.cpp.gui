@@ -22,6 +22,9 @@
 
 MainFrame::MainFrame(const wxString& title) : wxFrame(nullptr, wxID_ANY, title)
 {
+	wxPanel* panel = new wxPanel(this);
+	std::vector<wxButton> buttons;
+
 
 }
 
