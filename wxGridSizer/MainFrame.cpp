@@ -33,6 +33,10 @@ MainFrame::MainFrame(const wxString& title) : wxFrame(nullptr, wxID_ANY, title)
 	}
 
 	wxGridSizer* gridSizer = new wxGridSizer(3, 2, wxSize(0, 0));
+
+	for (wxButton* button : buttons) {
+		gridSizer->Add(button);
+	}
 }
 
 
