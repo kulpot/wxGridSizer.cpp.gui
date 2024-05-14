@@ -37,6 +37,9 @@ MainFrame::MainFrame(const wxString& title) : wxFrame(nullptr, wxID_ANY, title)
 	for (wxButton* button : buttons) {
 		gridSizer->Add(button);
 	}
+
+	panel->SetSizer(gridSizer);
+	gridSizer->SetSizeHints(this):
 }
 
 
