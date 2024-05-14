@@ -33,6 +33,8 @@ MainFrame::MainFrame(const wxString& title) : wxFrame(nullptr, wxID_ANY, title)
 		buttons.push_back(button);
 	}
 
+	buttons[0]->SetMinSize(wxSize(600, 200));
+
 	//wxGridSizer* gridSizer = new wxGridSizer(3, 2, wxSize(0, 0));
 	wxGridSizer* gridSizer = new wxGridSizer(0, 2, wxSize(0, 0));
 
