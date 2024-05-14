@@ -36,8 +36,9 @@ MainFrame::MainFrame(const wxString& title) : wxFrame(nullptr, wxID_ANY, title)
 	//buttons[0]->SetMinSize(wxSize(600, 200));
 
 	//wxGridSizer* gridSizer = new wxGridSizer(3, 2, wxSize(0, 0));
-	//wxGridSizer* gridSizer = new wxGridSizer(0, 2, wxSize(0, 0));
-	wxGridSizer* gridSizer = new wxGridSizer(0, 2, wxSize(50, 50));
+	wxGridSizer* gridSizer = new wxGridSizer(0, 2, wxSize(0, 0));
+	//wxGridSizer* gridSizer = new wxGridSizer(0, 2, wxSize(50, 50));
+	wxSizerFlags flags = wxSizerFlags().Proportion(1);
 
 	for (wxButton* button : buttons) {
 		gridSizer->Add(button);
