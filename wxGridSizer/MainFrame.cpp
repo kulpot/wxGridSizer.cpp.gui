@@ -32,7 +32,7 @@ MainFrame::MainFrame(const wxString& title) : wxFrame(nullptr, wxID_ANY, title)
 		buttons.push_back(button);
 	}
 
-
+	wxGridSizer* gridSizer = new wxGridSizer(3, 2, wxSize(0, 0));
 }
 
 
