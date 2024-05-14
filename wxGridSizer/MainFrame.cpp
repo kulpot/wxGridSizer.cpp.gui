@@ -26,7 +26,7 @@ MainFrame::MainFrame(const wxString& title) : wxFrame(nullptr, wxID_ANY, title)
 	std::vector<wxButton> buttons;
 
 	//for (int i = 0; i < 6; i++)
-	for (int i = 0; i < 7; i++)
+	for (int i = 0; i < 10; i++)
 	{
 		wxString label = wxString::Format("Button %d", i + 1);
 		wxButton* button = new wxButton(panel, wxID_ANY, label, wxDefaultPosition, wxSize(300, 100));
