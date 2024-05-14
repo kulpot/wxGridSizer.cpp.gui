@@ -25,18 +25,19 @@ MainFrame::MainFrame(const wxString& title) : wxFrame(nullptr, wxID_ANY, title)
 	wxPanel* panel = new wxPanel(this);
 	std::vector<wxButton> buttons;
 
-	//for (int i = 0; i < 6; i++)
-	for (int i = 0; i < 10; i++)
+	for (int i = 0; i < 6; i++)
+	//for (int i = 0; i < 10; i++)
 	{
 		wxString label = wxString::Format("Button %d", i + 1);
 		wxButton* button = new wxButton(panel, wxID_ANY, label, wxDefaultPosition, wxSize(300, 100));
 		buttons.push_back(button);
 	}
 
-	buttons[0]->SetMinSize(wxSize(600, 200));
+	//buttons[0]->SetMinSize(wxSize(600, 200));
 
 	//wxGridSizer* gridSizer = new wxGridSizer(3, 2, wxSize(0, 0));
-	wxGridSizer* gridSizer = new wxGridSizer(0, 2, wxSize(0, 0));
+	//wxGridSizer* gridSizer = new wxGridSizer(0, 2, wxSize(0, 0));
+	wxGridSizer* gridSizer = new wxGridSizer(0, 2, wxSize(50, 50));
 
 	for (wxButton* button : buttons) {
 		gridSizer->Add(button);
