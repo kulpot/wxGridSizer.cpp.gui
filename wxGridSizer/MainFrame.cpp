@@ -43,7 +43,8 @@ MainFrame::MainFrame(const wxString& title) : wxFrame(nullptr, wxID_ANY, title)
 	//wxSizerFlags flags = wxSizerFlags().Expand().CenterVertical();
 	//wxSizerFlags flags = wxSizerFlags().Expand().CenterHorizontal();
 	//wxSizerFlags flags = wxSizerFlags().Shaped();
-	wxSizerFlags flags = wxSizerFlags().Center();
+	//wxSizerFlags flags = wxSizerFlags().Center();
+	wxSizerFlags flags = wxSizerFlags().Border(wxALL, 50);
 
 	for (wxButton* button : buttons) {
 		gridSizer->Add(button, flags);
