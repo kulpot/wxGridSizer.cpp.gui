@@ -40,7 +40,8 @@ MainFrame::MainFrame(const wxString& title) : wxFrame(nullptr, wxID_ANY, title)
 	//wxGridSizer* gridSizer = new wxGridSizer(0, 2, wxSize(50, 50));
 	//wxSizerFlags flags = wxSizerFlags().Proportion(1);
 	//wxSizerFlags flags = wxSizerFlags().Expand();
-	wxSizerFlags flags = wxSizerFlags().Expand().CenterVertical();
+	//wxSizerFlags flags = wxSizerFlags().Expand().CenterVertical();
+	wxSizerFlags flags = wxSizerFlags().Expand().CenterHorizontal();
 
 	for (wxButton* button : buttons) {
 		gridSizer->Add(button, flags);
