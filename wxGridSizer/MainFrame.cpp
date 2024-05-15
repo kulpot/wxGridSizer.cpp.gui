@@ -23,7 +23,7 @@
 MainFrame::MainFrame(const wxString& title) : wxFrame(nullptr, wxID_ANY, title)
 {
 	wxPanel* panel = new wxPanel(this);
-	std::vector<wxButton> buttons;
+	std::vector<wxButton*> buttons;
 
 	for (int i = 0; i < 6; i++)
 	//for (int i = 0; i < 10; i++)
@@ -41,11 +41,11 @@ MainFrame::MainFrame(const wxString& title) : wxFrame(nullptr, wxID_ANY, title)
 	wxSizerFlags flags = wxSizerFlags().Proportion(1);
 
 	for (wxButton* button : buttons) {
-		gridSizer->Add(button);
+		gridSizer->Add(button, flags);
 	}
 
 	panel->SetSizer(gridSizer);
-	gridSizer->SetSizeHints(this):
+	gridSizer->SetSizeHints(this);
 }
 
 
